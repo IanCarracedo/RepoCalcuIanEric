@@ -48,7 +48,7 @@ public class Calculadora {
 	}
 
 	/**
-	 * Launch the application.
+	 * Inicia la aplicacio
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -63,7 +63,9 @@ public class Calculadora {
 	}
 
 	/**
-	 * Open the window.
+	 * Obre la finestra.
+	 * 
+	 * @param open Correcte funcionament al obrir la finestra.
 	 */
 	//El codi generat automaticament usa el metode window.open() en comptes de dibuixaCalculadora
 	//public void open() {
@@ -80,7 +82,10 @@ public class Calculadora {
 	}
 
 	/**
-	 * Create contents of the window.
+	 * Crea els continguts de la finestra.
+	 * 
+	 * @param createContent Correcte funcionament al crear els continguts de la
+	 *                      finestra.
 	 */
 	protected void createContents() {
 		shell = new Shell();
@@ -287,11 +292,23 @@ public class Calculadora {
 		text_resultat.setText(s);
 	}
 
+	/**
+	 * Mostra el resultat en format int.
+	 * 
+	 * @param resultat resultat numèric en int
+	 */
+	
 	public int getResultatInt()  {
 		String resultat = text_resultat.getText();
 		return Integer.parseInt(resultat);
 	}
 
+	/**
+	 * Ens deixa afegir nous digits.
+	 * 
+	 * @param resultat Resultat digits afegits de l'usuari final.
+	 */
+	
 	public void afegeixNouDigit(int digit){
 		if (inicialitza_resultat)
 			setResultatString("");
@@ -312,6 +329,12 @@ public class Calculadora {
 		inicialitza_resultat = false;
 	}
 
+	/**
+	 * Executa l'operacio segons l'operador selecionat.
+	 * 
+	 * @param resultat resultat operadors.
+	 */
+	
 	public void executarOperador(String new_operacio) {
 
 		int resultat;
@@ -334,6 +357,12 @@ public class Calculadora {
 
 	}
 
+	/**
+	 * Utilitzant aquesta funció el que far�  és que ens funcioni el igual.
+	 * 
+	 * @param resultat Correcte funcionament al executar el igual.
+	 */
+	
 	public void executarIgual(){
 		int resultat = 0;
 
@@ -344,6 +373,13 @@ public class Calculadora {
 		operacio = "null";
 	} 
 
+	/**
+	 * Executar totes les operacions necessaries que requereix la calculadora, la
+	 * divisio, la multiplicacio, la resta i la suma.
+	 * 
+	 * @param resultat Resultat de les operacions.
+	 */
+	
 	public int executarOperacio() {
 		int resultat = 0;
 
