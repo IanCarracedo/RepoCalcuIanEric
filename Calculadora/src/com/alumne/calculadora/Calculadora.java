@@ -275,7 +275,10 @@ public class Calculadora {
 		text_resultat.setBounds(22, 19, 196, 21);
 
 	}
-
+	/**
+	 * Metode que asigna valors inicials a la calculadora.
+	 * 
+	 */
 	public void inicialitza()  {
 		operacio = "null";
 		valor1 = 0;
