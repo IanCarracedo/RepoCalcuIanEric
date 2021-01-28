@@ -286,11 +286,19 @@ public class Calculadora {
 		mode = MODE_ENTRADA;
 		inicialitza_resultat = true;
 	}
-
+	
+	/**
+	 * Metode que agarra el text ingresat al control JTextArea.
+	 * @return
+	 */
 	public String getResultatString (){
 		return text_resultat.getText();
 	}
 
+	/**
+	 * Metode que mostra el resultat en pantalla dins un control JTextArea.
+	 * @param s
+	 */
 	public void setResultatString(String s){
 		text_resultat.setText(s);
 	}
